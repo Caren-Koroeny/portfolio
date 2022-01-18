@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Navigation </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css')}}">
+    </head>
+    <body>
+        <header>
+        <div class="cotainer">
+        <h1 class="Image">Flask website</h1>
+        <strong>
+            <nav>
+                <ul class="menu">
+                    <li><a href="{{ url_for('home')}}">Home</a></li>   
+                    <li><a href="{{ url_for('about')}}">About</a></li>
+                    <li><a href="{{ url_for('login')}}">Login</a></li>
+                    <li><a href="{{ url_for('register')}}">Register</a></li>
+                    <li><a href="{{ url_for('services')}}">Services</a></li>
+                </ul>
+            </nav>
+        </strong>
+    </div>
+</header>
+{% block content%}
+{% endblock %}
+        </body>
+        </html>
+
+{% comment %} url_for() accepts the function name as an argument {% endcomment %}
